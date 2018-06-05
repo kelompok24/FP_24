@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hai Dokter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/blog-post.css" rel="stylesheet">
+
+  </head>
+
+  <body ng-app="instantSearch" ng-controller="InstantSearchController">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Hai Dokter</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="search.html">Cari Penyakit
+              <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="search2.html">Cari Dokter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+              <li class="nav-item">
+              <a class="nav-link" href="reg.html">Register</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+          <!-- Title -->
+          <h1 class="mt-4">Post Title</h1>
+
+          <!-- Author -->
+          <p class="lead">
+
+    <div class="bar">
+      <!-- Create a binding between the searchString model and the text field -->
+      <input type="text" ng-model="searchString" placeholder="Enter your search terms" />
+    </div>
+
+    <ul class="bar1">
+      <!-- Render a li element for every entry in the items array. Notice
+         the custom search filter "searchFor". It takes the value of the
+         searchString model as an argument.
+       -->
+      <li class="bar1" ng-repeat="i in items | searchFor:searchString">
+        <a href="{{i.url}}"><img class="bar1" ng-src="{{i.image}}" /></a>
+        <p class="bar1">{{i.title}}</p>
+      </li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="assets/angular/scipt.js"></script>
+
+          <hr>
+
+          <!-- Comments Form -->
+          </div>
+
+          <!-- Single Comment -->
+
+
+            </div>
+          </div>
+
+        </div>
+
+
+          <!-- Side Widget -->
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark fixed-bottom">
+      <div id="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Kelompok 24 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
